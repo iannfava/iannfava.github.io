@@ -1,278 +1,301 @@
-<!-- Hero / Profile Section (#home) -->
-<section id="home" class="flex flex-col items-center text-center pt-2 scroll-mt-24">
-  <div class="relative group mb-6">
-    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-b from-emerald-500/30 to-transparent blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
-    <div class="relative w-44 h-44 rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl bg-zinc-900 flex items-center justify-center">
-      <img 
-        src="https://avatars.githubusercontent.com/u/iannfava" 
-        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';"
-        alt="Ian Fava" 
-        class="w-full h-full object-cover object-top"
-      />
-    </div>
-  </div>
-
-  <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
-    Ian Fava — <span class="text-emerald-400">Analytics Engineer</span>
-  </h1>
-  <p class="text-sm sm:text-base text-zinc-400 max-w-md leading-relaxed font-normal">
-    Pipelines confiáveis, modelagem e dados prontos para decisão estratégica.
-  </p>
+<!DOCTYPE html><html class="dark" lang="en" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ian Fava | Analytics Engineer Portfolio</title><meta content="Pipelines confiáveis, modelagem e dados prontos para decisão estratégica." name="description">
+<meta content="Ian Fava | Analytics Engineer Portfolio" property="og:title">
+<meta content="Pipelines confiáveis, modelagem e dados prontos para decisão estratégica." property="og:description">
+<meta content="website" property="og:type">
+<meta content="summary_large_image" name="twitter:card">
+<meta content="Ian Fava | Analytics Engineer Portfolio" name="twitter:title">
+<meta content="Pipelines confiáveis, modelagem e dados prontos para decisão estratégica." name="twitter:description">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Breathing dot animation */
+        @keyframes breathe {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .animate-breathe {
+            animation: breathe 2s ease-in-out infinite;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-dim": "#121412",
+                "on-primary-container": "#9dd090",
+                "surface": "#121412",
+                "on-surface-variant": "#c2c9bb",
+                "on-tertiary-fixed-variant": "#005227",
+                "secondary": "#aed0a3",
+                "on-error-container": "#ffdad6",
+                "error": "#ffb4ab",
+                "tertiary-container": "#005d2d",
+                "surface-variant": "#333533",
+                "tertiary": "#66dd8b",
+                "surface-bright": "#383a37",
+                "outline": "#8c9387",
+                "tertiary-fixed-dim": "#66dd8b",
+                "on-surface": "#e2e3df",
+                "error-container": "#93000a",
+                "on-tertiary": "#003919",
+                "on-secondary-container": "#a0c296",
+                "on-tertiary-fixed": "#00210c",
+                "secondary-container": "#33502e",
+                "secondary-fixed": "#c9ecbe",
+                "surface-container-highest": "#333533",
+                "surface-container": "#1e201e",
+                "on-secondary-fixed-variant": "#314e2c",
+                "on-primary-fixed": "#002201",
+                "on-secondary-fixed": "#052105",
+                "surface-container-lowest": "#0d0f0d",
+                "on-primary-fixed-variant": "#23501e",
+                "on-tertiary-container": "#62da87",
+                "surface-container-high": "#292a28",
+                "inverse-surface": "#e2e3df",
+                "inverse-on-surface": "#2f312e",
+                "on-primary": "#0a3909",
+                "outline-variant": "#42493e",
+                "on-secondary": "#1b3717",
+                "on-background": "#e2e3df",
+                "primary-fixed-dim": "#a1d494",
+                "tertiary-fixed": "#83fba5",
+                "primary": "#a1d494",
+                "surface-tint": "#a1d494",
+                "secondary-fixed-dim": "#aed0a3",
+                "background": "#121412",
+                "primary-container": "#2d5a27",
+                "inverse-primary": "#3b6934",
+                "primary-fixed": "#bcf0ae",
+                "on-error": "#690005",
+                "surface-container-low": "#1a1c1a"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "stack-md": "16px",
+                "margin-mobile": "16px",
+                "unit": "4px",
+                "gutter": "24px",
+                "margin-desktop": "48px",
+                "stack-sm": "8px",
+                "stack-lg": "32px",
+                "container-max-width": "1200px",
+                "section-gap-desktop": "120px",
+                "section-gap-mobile": "64px"
+        },
+        "fontFamily": {
+                "label-sm": [
+                        "JetBrains Mono"
+                ],
+                "label-md": [
+                        "JetBrains Mono"
+                ],
+                "headline-lg": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Geist"
+                ],
+                "headline-lg-mobile": [
+                        "Geist"
+                ],
+                "headline-sm": [
+                        "Geist"
+                ],
+                "headline-md": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.03em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar (JSON Component) -->
+<header class="bg-background/80 dark:bg-background/80 backdrop-blur-xl sticky top-0 w-full z-50 border-b border-outline-variant/30 shadow-[0_0_20px_rgba(161,212,148,0.15)] flex justify-between items-center px-gutter py-4"><div class="max-w-container-max-width mx-auto w-full flex items-center justify-between"><a href="#home" class="flex items-center gap-2.5 group"><div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#a1d494]"></div><span class="font-label-md tracking-tight font-medium text-on-surface group-hover:text-primary transition-colors text-sm md:text-base">Analytics Engineer <span class="text-primary font-semibold">Portfolio</span></span></a><div class="flex items-center gap-4 text-xs font-label-md text-on-surface-variant"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20 text-[11px]"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Disponível</span></div></div></header>
+<main class="flex-grow pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="max-w-container-max-width mx-auto px-gutter py-section-gap-mobile md:py-section-gap-desktop flex flex-col items-center text-center gap-8 mt-8 md:mt-16" id="home">
+<div class="relative rounded-full border-2 border-outline-variant/30 overflow-hidden shadow-[0_0_30px_rgba(161,212,148,0.15)] flex-shrink-0" style="width: clamp(208px, 20vw, 250px); height: clamp(208px, 20vw, 250px);"><img class="w-full h-full object-cover" data-alt="A professional headshot portrait of a data analyst in a dark, modern setting. The subject is slightly smiling, lit by soft, high-tech blue rim lighting against a deep midnight navy background. Corporate modern aesthetic, highly detailed, sharp focus." src="https://lh3.googleusercontent.com/aida/AEtjO1UOLcvWVMe9QfM6rl47TmcjEBqUmMRFxx0NETcNcH4wCar22mkjl6-u-JBhSBzKcYL6Z-n-minDcFaiIPmY_SW6Uv5LoXKM3Y4PjrKcJXcEQLJ6h67SgPAGmdveqoWtW7kHEyFwepBNtxRoflqF5h1dsI5MwKS9HayYfROKeiMaJVGSdaiB917zpm53GWbCuRaBfJ10aCExOMxOelbRJFE0mQ-0QLauuKnD6HpyEkHux7NTK6YDAbPjteuB7v8Fd02kfM8MgsxTrg"></div>
+<div class="max-w-3xl">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6">Ian Fava - <span class="text-primary">Analytics Engineer</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Pipelines confiáveis, modelagem e dados prontos para decisão estratégica.</p>
+</div>
+</section>
+<!-- Projects Section (Bento/Grid) -->
+<section class="max-w-container-max-width mx-auto px-gutter py-section-gap-mobile" id="projetos">
+<div class="flex items-center gap-4 mb-12">
+<div class="h-px bg-outline-variant flex-grow opacity-50"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Projetos em Destaque</h2>
+<div class="h-px bg-outline-variant flex-grow opacity-50"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- Project Card 1 -->
+<a class="group flex flex-col bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors shadow-lg hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] cursor-pointer block" href="https://github.com/iannfava/strategic-dashboard-streamlit" rel="noopener noreferrer" target="_blank"><div class="h-48 md:h-64 w-full relative overflow-hidden bg-surface-container"><img alt="strategic-dashboard-streamlit mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1WQ1uwCyk9uCBm46x9jY-2gidHWnGUdpE5Juvoc0EAOmaq0E-kYffbSf96qhR-3SfN3Wxsf-Q8Cs7GeyhvVyrhHKRKi8P8gnFcZFBIu6wwNSvReJFW1rLnMVxeUwT7wmhKXmX2yJDZVAf6IggHHuy5iqXQDI7TIEoqKOmBAqfom7dshNRIUon4xgtF7SK2Hmtb5KV-acWrxHXdr62g7shuwzJ543MrmbssGkWxpOZjRXpywt8cmj31qMyU"></div><div class="p-6 flex flex-col flex-grow"><div class="flex items-center justify-between gap-2 mb-2"><span class="font-body-lg text-body-lg font-bold text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">strategic-dashboard-streamlit<span class="material-symbols-outlined text-xs opacity-50">open_in_new</span></span><span class="text-[10px] font-label-md px-2 py-0.5 rounded-full border border-outline-variant/30 text-on-surface-variant">Public</span></div><p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Dashboard interativo em Python e Streamlit para leitura estratégica de indicadores de negócio, com dados tratados e visualizações voltadas a apoio à decisão.</p><div class="flex flex-wrap gap-2 mt-auto items-center"><span class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs"><span class="w-2 h-2 rounded-full bg-sky-400"></span> Python</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Streamlit</span></div></div></a>
+<!-- Project Card 2 -->
+<a class="group flex flex-col bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors shadow-lg hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] cursor-pointer block" href="https://github.com/iannfava/data-warehouse-airflow-dbt" rel="noopener noreferrer" target="_blank"><div class="h-48 md:h-64 w-full relative overflow-hidden bg-surface-container"><img alt="data-warehouse-airflow-dbt diagram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1WqZ56mnFzwlMRbM-HT7R7a5V87u7DQNjFlfds0B9q6tewIOeeD-T8HJbKKMhUj8gF5-q-1J4pO8SQl01DKPFhycK2HEwagQ3VwnwGjj_8nZUo7zBx00yiQ4sQP-czz2G2h3FrRIppxTb6LrQJ8T3ZtdHEtjW6tYTeOj65lt4z4ASCjb_2aKFf7z-Km-Ti6kCybLskhOoJc_VcdgFhsU-yHmCCmbjjymUGuTrdhHSMb"></div><div class="p-6 flex flex-col flex-grow"><div class="flex items-center justify-between gap-2 mb-2"><span class="font-body-lg text-body-lg font-bold text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">data-warehouse-airflow-dbt<span class="material-symbols-outlined text-xs opacity-50">open_in_new</span></span><span class="text-[10px] font-label-md px-2 py-0.5 rounded-full border border-outline-variant/30 text-on-surface-variant">Public</span></div><p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Data Warehouse construído do zero com Docker, Airflow e dbt. Pipeline de ingestão, transformação e modelagem seguindo boas práticas de engenharia de dados.</p><div class="flex flex-wrap gap-2 mt-auto items-center"><span class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs"><span class="w-2 h-2 rounded-full bg-sky-400"></span> Python</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Airflow</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">dbt</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Docker</span></div></div></a>
+<!-- Project Card 3 -->
+<a class="group flex flex-col bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors shadow-lg hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] cursor-pointer block" href="https://github.com/iannfava/ml-deployment-comparison" rel="noopener noreferrer" target="_blank"><div class="h-48 md:h-64 w-full relative overflow-hidden bg-surface-container"><img alt="ml-deployment-comparison diagram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1Vxz6Ba7pFlRkGGI7VVZf9QCZGjjif49kVxqIZPkNlicTMHX0OY-9os_3Dd5aTN4sat9NzZx0uBsO2Rb6_LaYCaz8BPCZVuaObyccozWrP-L_6u7ApKGEk36nn7Qmilqo21iBsFVpmJy6x8Sm8WFmLkctgya_By_OzM-KsIInWOexpFEvHLs9Ii-225dS26ATfRRjrTpko4UwkbOOdFGy2DzTUbF0U6u-ai8KK4FSuIM6hX0UCHamgHMeM"></div><div class="p-6 flex flex-col flex-grow"><div class="flex items-center justify-between gap-2 mb-2"><span class="font-body-lg text-body-lg font-bold text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">ml-deployment-comparison<span class="material-symbols-outlined text-xs opacity-50">open_in_new</span></span><span class="text-[10px] font-label-md px-2 py-0.5 rounded-full border border-outline-variant/30 text-on-surface-variant">Public</span></div><p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Deploy de um modelo de Machine Learning comparando duas abordagens de infraestrutura : on-premise e serverless, avaliando trade-offs de custo, escalabilidade e latência.</p><div class="flex flex-wrap gap-2 mt-auto items-center"><span class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs"><span class="w-2 h-2 rounded-full bg-orange-500"></span> Jupyter Notebook</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Python</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Machine Learning</span></div></div></a>
+<!-- Project Card 4 -->
+<a class="group flex flex-col bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors shadow-lg hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] cursor-pointer block" href="https://github.com/iannfava/azure-iot-data-pipeline" rel="noopener noreferrer" target="_blank"><div class="h-48 md:h-64 w-full relative overflow-hidden bg-surface-container"><img alt="Azure IoT data pipeline" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1XZGc5FPXNk40bVgxVstZRDcq2LUTQzJeSWV65z-s_gHn6z8MKVuC5rZmxvlUrCB7h8Xd9Or8pCCCpsgACiTerRvxNqVcKZ3O8qofs7X53_gXzG4JL15eWwd9BdBgeKhRWDaOw2pJ1dgmje_JQigyz-lKgT_x2GbLPSOzQjDXzPd9VCoUlr1Uhri70_K5LXug7p_6O5zFdvmz2uBfbPMHiex1Lri-9qxn2pGwUs_DlI2FMucT6TlUbQvn0"></div><div class="p-6 flex flex-col flex-grow"><div class="flex items-center justify-between gap-2 mb-2"><span class="font-body-lg text-body-lg font-bold text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">azure-iot-data-pipeline<span class="material-symbols-outlined text-xs opacity-50">open_in_new</span></span><span class="text-[10px] font-label-md px-2 py-0.5 rounded-full border border-outline-variant/30 text-on-surface-variant">Public</span></div><p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Pipeline de dados na Azure simulando uma fábrica inteligente, com arquitetura medallion (Data Factory, Synapse, IoT Hub, Functions) cobrindo camadas batch, analítica e streaming.</p><div class="flex flex-wrap gap-2 mt-auto items-center"><span class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs"><span class="w-2 h-2 rounded-full bg-orange-500"></span> Jupyter Notebook</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Azure</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">IoT</span></div></div></a>
+<!-- Project Card 5 -->
+<a class="group flex flex-col bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors shadow-lg hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] cursor-pointer block" href="https://github.com/iannfava/ecommerce-sales-analytics" rel="noopener noreferrer" target="_blank"><div class="h-48 md:h-64 w-full relative overflow-hidden bg-surface-container"><img alt="E-commerce analytics dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7SwT_5Nhy16Zlt7nL5YEs2VNohIF_-_ObCHLg5-Z8ZQuY-NjJSBrqFY60rl0SHcZivK78VTRte1NpBe7yK_OlmZ68jistAwa47-t3NNj1Kmd0DoonbVVk6FU02E5AsTqNp0gTZ4CNz3Sko5QXqyUTNAokEB9PhFVuNbY7dI94bAN-P5OEqRjtWTy9tSi8vvc_a6TBof0l1B75WLsDpCyo7GfMuU3Q-uXSp2v_tgwkLV7qe6Djt_FPEe-wFPAZvRUX_A"></div><div class="p-6 flex flex-col flex-grow"><div class="flex items-center justify-between gap-2 mb-2"><span class="font-body-lg text-body-lg font-bold text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">ecommerce-sales-analytics<span class="material-symbols-outlined text-xs opacity-50">open_in_new</span></span><span class="text-[10px] font-label-md px-2 py-0.5 rounded-full border border-outline-variant/30 text-on-surface-variant">Public</span></div><p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Análise de dados de vendas de e-commerce aplicando os 4 tipos de análise (descritiva, diagnóstica, preditiva e prescritiva) para apoiar decisões comerciais.</p><div class="flex flex-wrap gap-2 mt-auto items-center"><span class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs"><span class="w-2 h-2 rounded-full bg-sky-400"></span> Python</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Analytics</span></div></div></a>
+<!-- Project Card 6 -->
+<a class="group flex flex-col bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors shadow-lg hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] cursor-pointer block" href="https://github.com/iannfava/powerbi-ecommerce-dashboard" rel="noopener noreferrer" target="_blank"><div class="h-48 md:h-64 w-full relative overflow-hidden bg-surface-container"><img alt="Power BI - Análise de pagamentos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1VCP6_0_YrxaPZo9B5plnwiFsTzUuQAHWcRT4r_RZ6K0qFMNYiZtb6POUEYQxzKqXN6pMxPV8tGdTy3zXOmNHEND7PSlm1zgdEq18WMkb0bPCJ9hMZ576IE50x7az8tuSPcw4UsiMl0oieMXTlkmpThTBSpJEf4ChO2bP69wrL5M--GcshwA6_Ce1QrJcrrJYcPJfN-MC_VQoHhCdtfCNzaTOvvZMMs36degAVN2KeOk4dwfJkgEBlNdu0"></div><div class="p-6 flex flex-col flex-grow"><div class="flex items-center justify-between gap-2 mb-2"><span class="font-body-lg text-body-lg font-bold text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">powerbi-ecommerce-dashboard<span class="material-symbols-outlined text-xs opacity-50">open_in_new</span></span><span class="text-[10px] font-label-md px-2 py-0.5 rounded-full border border-outline-variant/30 text-on-surface-variant">Public</span></div><p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Dashboard em Power BI sobre o dataset Olist (e-commerce BR), com 6 visões de negócio, com metas, clusterização, Pareto e cohort, simulando uma entrega para diretoria.</p><div class="flex flex-wrap gap-2 mt-auto items-center"><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">Power BI</span><span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary-fixed-dim font-label-md text-xs">DAX</span></div></div></a></div>
+</section>
+<!-- Skills Section -->
+<section class="bg-surface-container-lowest py-16 px-gutter border-y border-outline-variant/10" id="stacks">
+<div class="max-w-container-max-width mx-auto text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Ferramentas &amp; Tecnologias</h2>
+<div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+<div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default">
+<span class="material-symbols-outlined text-primary">data_object</span>
+<span class="font-label-md text-on-surface">Python</span>
+</div>
+<div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default">
+<span class="material-symbols-outlined text-primary">database</span>
+<span class="font-label-md text-on-surface">SQL</span>
+</div>
+<div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default">
+<span class="material-symbols-outlined text-primary">bar_chart</span>
+<span class="font-label-md text-on-surface">Power BI</span>
+</div>
+<div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default">
+<span class="material-symbols-outlined text-primary">functions</span>
+<span class="font-label-md text-on-surface">Estatística</span>
+</div>
+<div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default">
+<span class="material-symbols-outlined text-primary">table_chart</span>
+<span class="font-label-md text-on-surface">Excel</span>
+</div>
+<div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><span class="material-symbols-outlined text-primary">air</span><span class="font-label-md text-on-surface">Airflow</span></div><div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><span class="material-symbols-outlined text-primary">bolt</span><span class="font-label-md text-on-surface">Spark</span></div><div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><span class="material-symbols-outlined text-primary">terminal</span><span class="font-label-md text-on-surface">dbt</span></div><div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><span class="material-symbols-outlined text-primary">cloud</span><span class="font-label-md text-on-surface">Azure</span></div><div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><span class="material-symbols-outlined text-primary">dock</span><span class="font-label-md text-on-surface">Docker</span></div><div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><svg class="w-5 h-5 text-primary fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.44 0v7.575l6.561 3.79V3.79L1.44 0zm7.999 4.62v7.574l6.563 3.79V8.41L9.439 4.62zm0 8.847v7.575l6.563-3.79V9.676l-6.563 3.79zm7.997-4.227v7.575L22 13.024V5.45l-6.564 3.79z"></path></svg><span class="font-label-md text-on-surface">Terraform</span></div><div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><span class="material-symbols-outlined text-primary">commit</span><span class="font-label-md text-on-surface">Git</span></div><div class="px-6 py-3 bg-surface-container-low border border-outline-variant/20 rounded-lg flex items-center gap-2 hover:border-primary/40 transition-colors cursor-default"><span class="material-symbols-outlined text-primary">dataset</span><span class="font-label-md text-on-surface">Databricks</span></div></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (JSON Component - Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#121613]/90 border-t border-outline-variant/30 px-3 py-2 shadow-2xl"><div class="flex items-center justify-around"><a href="#home" class="flex flex-col items-center justify-center gap-1 py-1 px-3 rounded-lg text-primary transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path></svg><span class="text-[11px] font-medium tracking-wide">Home</span></a><a href="#projetos" class="flex flex-col items-center justify-center gap-1 py-1 px-3 rounded-lg text-on-surface-variant hover:text-primary transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"></path></svg><span class="text-[11px] font-medium tracking-wide">Projetos</span></a><a href="#stacks" class="flex flex-col items-center justify-center gap-1 py-1 px-3 rounded-lg text-on-surface-variant hover:text-primary transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path></svg><span class="text-[11px] font-medium tracking-wide">Stacks</span></a><a href="#contato" class="flex flex-col items-center justify-center gap-1 py-1 px-3 rounded-lg text-on-surface-variant hover:text-primary transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a.75.75 0 0 1-.974-.94 4.09 4.09 0 0 0 .528-2.228C3.652 16.353 3 14.28 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"></path></svg><span class="text-[11px] font-medium tracking-wide">Contato</span></a></div></nav>
+<!-- Footer (JSON Component) -->
+<section class="bg-surface-container-low py-16 px-gutter border-t border-outline-variant/10" id="contato">
+<div class="max-w-container-max-width mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface text-center mb-12">Contato</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<a class="flex items-center gap-4 p-6 bg-surface-container rounded-xl border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] transition-all cursor-pointer group" href="mailto:iannfava@gmail.com"><span class="material-symbols-outlined text-primary text-3xl">mail</span><div><p class="font-label-md text-label-md text-on-surface-variant">Email</p><p class="font-body-md text-on-surface group-hover:text-primary transition-colors">iannfava@gmail.com</p></div></a>
+<a class="flex items-center gap-4 p-6 bg-surface-container rounded-xl border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] transition-all cursor-pointer group" href="https://wa.me/5517991658309" target="_blank">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Telefone</p>
+<p class="font-body-md text-on-surface group-hover:text-primary transition-colors">+55 17 991658309</p>
+</div>
+</a>
+<div class="flex items-center gap-4 p-6 bg-surface-container rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Localização</p>
+<p class="font-body-md text-on-surface">Votuporanga-SP</p>
+</div>
+</div>
+<a class="flex items-center gap-4 p-6 bg-surface-container rounded-xl border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] transition-all cursor-pointer group" href="https://www.linkedin.com/in/iannfava" target="_blank">
+<span class="material-symbols-outlined text-primary text-3xl">link</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">LinkedIn</p>
+<p class="font-body-md text-on-surface group-hover:text-primary transition-colors">in/iannfava</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-6 bg-surface-container rounded-xl border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(161,212,148,0.05)] transition-all cursor-pointer group" href="https://github.com/iannfava" target="_blank">
+<span class="material-symbols-outlined text-primary text-3xl">code</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">GitHub</p>
+<p class="font-body-md text-on-surface group-hover:text-primary transition-colors">github.com/iannfava</p>
+</div>
+</a>
+</div>
+</div>
 </section>
 
-<!-- Projects Section (#projetos) -->
-<section id="projetos" class="space-y-6 scroll-mt-24">
-  <div class="flex items-center justify-between border-b border-white/10 pb-3">
-    <h2 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-      Projetos em Destaque
-    </h2>
-    <span class="text-xs font-mono text-zinc-400">6 repositórios</span>
-  </div>
 
-  <div class="space-y-5">
-
-    <!-- Projeto 1: Streamlit -->
-    <a href="https://github.com/iannfava/strategic-dashboard-streamlit" target="_blank" rel="noopener noreferrer" class="block card-glass rounded-2xl p-4 overflow-hidden group">
-      <div class="w-full h-44 rounded-xl overflow-hidden mb-3 bg-zinc-900 border border-white/5">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="strategic-dashboard-streamlit" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="flex items-center justify-between mb-1.5">
-        <h3 class="font-mono text-sm font-semibold text-emerald-300 group-hover:text-emerald-400 flex items-center gap-1.5">
-          strategic-dashboard-streamlit
-          <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-        </h3>
-        <span class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 border border-white/10 px-2 py-0.5 rounded">Public</span>
-      </div>
-      <p class="text-xs text-zinc-300 mb-3 leading-relaxed">
-        Dashboard interativo em Python e Streamlit para leitura estratégica de indicadores de negócio, com dados tratados e visualizações voltadas a apoio à decisão.
-      </p>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-emerald-950/60 text-emerald-300 border border-emerald-800/30">Python</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">Streamlit</span>
-      </div>
-    </a>
-
-    <!-- Projeto 2: Data Warehouse -->
-    <a href="https://github.com/iannfava/data-warehouse-airflow-dbt" target="_blank" rel="noopener noreferrer" class="block card-glass rounded-2xl p-4 overflow-hidden group">
-      <div class="w-full h-44 rounded-xl overflow-hidden mb-3 bg-zinc-900 border border-white/5">
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="data-warehouse-airflow-dbt" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="flex items-center justify-between mb-1.5">
-        <h3 class="font-mono text-sm font-semibold text-emerald-300 group-hover:text-emerald-400 flex items-center gap-1.5">
-          data-warehouse-airflow-dbt
-          <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-        </h3>
-        <span class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 border border-white/10 px-2 py-0.5 rounded">Public</span>
-      </div>
-      <p class="text-xs text-zinc-300 mb-3 leading-relaxed">
-        Data Warehouse construído do zero com Docker, Airflow e dbt. Pipeline de ingestão, transformação e modelagem seguindo boas práticas de engenharia de dados.
-      </p>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-emerald-950/60 text-emerald-300 border border-emerald-800/30">Python</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">Airflow</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">dbt</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">Docker</span>
-      </div>
-    </a>
-
-    <!-- Projeto 3: ML Deployment Comparison -->
-    <a href="https://github.com/iannfava/ml-deployment-comparison" target="_blank" rel="noopener noreferrer" class="block card-glass rounded-2xl p-4 overflow-hidden group">
-      <div class="w-full h-44 rounded-xl overflow-hidden mb-3 bg-zinc-900 border border-white/5">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="ml-deployment-comparison" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="flex items-center justify-between mb-1.5">
-        <h3 class="font-mono text-sm font-semibold text-emerald-300 group-hover:text-emerald-400 flex items-center gap-1.5">
-          ml-deployment-comparison
-          <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-        </h3>
-        <span class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 border border-white/10 px-2 py-0.5 rounded">Public</span>
-      </div>
-      <p class="text-xs text-zinc-300 mb-3 leading-relaxed">
-        Deploy de um modelo de Machine Learning comparando duas abordagens de infraestrutura: on-premise e serverless, avaliando trade-offs de custo, escalabilidade e latência.
-      </p>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-emerald-950/60 text-emerald-300 border border-emerald-800/30">Jupyter</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">Python</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">ML</span>
-      </div>
-    </a>
-
-    <!-- Projeto 4: Azure IoT Data Pipeline -->
-    <a href="https://github.com/iannfava/azure-iot-data-pipeline" target="_blank" rel="noopener noreferrer" class="block card-glass rounded-2xl p-4 overflow-hidden group">
-      <div class="w-full h-44 rounded-xl overflow-hidden mb-3 bg-zinc-900 border border-white/5">
-        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="azure-iot-data-pipeline" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="flex items-center justify-between mb-1.5">
-        <h3 class="font-mono text-sm font-semibold text-emerald-300 group-hover:text-emerald-400 flex items-center gap-1.5">
-          azure-iot-data-pipeline
-          <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-        </h3>
-        <span class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 border border-white/10 px-2 py-0.5 rounded">Public</span>
-      </div>
-      <p class="text-xs text-zinc-300 mb-3 leading-relaxed">
-        Pipeline de dados na Azure simulando uma fábrica inteligente, com arquitetura medallion (Data Factory, Synapse, IoT Hub, Functions) cobrindo camadas batch, analítica e streaming.
-      </p>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-emerald-950/60 text-emerald-300 border border-emerald-800/30">Azure</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">IoT</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">Data Lake</span>
-      </div>
-    </a>
-
-    <!-- Projeto 5: Ecommerce Sales Analytics -->
-    <a href="https://github.com/iannfava/ecommerce-sales-analytics" target="_blank" rel="noopener noreferrer" class="block card-glass rounded-2xl p-4 overflow-hidden group">
-      <div class="w-full h-44 rounded-xl overflow-hidden mb-3 bg-zinc-900 border border-white/5">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="ecommerce-sales-analytics" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="flex items-center justify-between mb-1.5">
-        <h3 class="font-mono text-sm font-semibold text-emerald-300 group-hover:text-emerald-400 flex items-center gap-1.5">
-          ecommerce-sales-analytics
-          <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-        </h3>
-        <span class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 border border-white/10 px-2 py-0.5 rounded">Public</span>
-      </div>
-      <p class="text-xs text-zinc-300 mb-3 leading-relaxed">
-        Análise de dados de vendas de e-commerce aplicando os 4 tipos de análise (descritiva, diagnóstica, preditiva e prescritiva) para apoiar decisões comerciais.
-      </p>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-emerald-950/60 text-emerald-300 border border-emerald-800/30">Python</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">Analytics</span>
-      </div>
-    </a>
-
-    <!-- Projeto 6: Power BI Ecommerce Dashboard -->
-    <a href="https://github.com/iannfava/powerbi-ecommerce-dashboard" target="_blank" rel="noopener noreferrer" class="block card-glass rounded-2xl p-4 overflow-hidden group">
-      <div class="w-full h-44 rounded-xl overflow-hidden mb-3 bg-zinc-900 border border-white/5">
-        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="powerbi-ecommerce-dashboard" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="flex items-center justify-between mb-1.5">
-        <h3 class="font-mono text-sm font-semibold text-emerald-300 group-hover:text-emerald-400 flex items-center gap-1.5">
-          powerbi-ecommerce-dashboard
-          <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-        </h3>
-        <span class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 border border-white/10 px-2 py-0.5 rounded">Public</span>
-      </div>
-      <p class="text-xs text-zinc-300 mb-3 leading-relaxed">
-        Dashboard em Power BI sobre o dataset Olist (e-commerce BR), com 6 visões de negócio, com metas, clusterização, Pareto e cohort, simulando uma entrega para diretoria.
-      </p>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-emerald-950/60 text-emerald-300 border border-emerald-800/30">Power BI</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-zinc-800/70 text-zinc-300 border border-zinc-700/50">DAX</span>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- Tech Stack Section (#stacks) -->
-<section id="stacks" class="space-y-4 scroll-mt-24">
-  <h2 class="text-xl font-bold text-white tracking-tight border-b border-white/10 pb-3">
-    Ferramentas & Tecnologias
-  </h2>
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 font-mono text-xs">
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">{ }</span> Python
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">🗄️</span> SQL
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">📊</span> Power BI
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">∑</span> Estatística
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">▦</span> Excel
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">🌀</span> Airflow
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">⚡</span> Spark
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">🔶</span> dbt
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">☁️</span> Azure
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">🐳</span> Docker
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">🟣</span> Terraform
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200">
-      <span class="text-emerald-400 font-bold">🌿</span> Git
-    </div>
-    <div class="card-glass rounded-xl p-3 flex items-center gap-2 text-zinc-200 col-span-2 sm:col-span-1">
-      <span class="text-emerald-400 font-bold">🧱</span> Databricks
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section (#contato) -->
-<section id="contato" class="space-y-3 scroll-mt-24">
-  <h2 class="text-xl font-bold text-white tracking-tight border-b border-white/10 pb-3">
-    Contato
-  </h2>
-
-  <div class="space-y-2.5">
-    <!-- Email -->
-    <a href="mailto:iannfava@gmail.com" class="card-glass rounded-xl p-3.5 flex items-center justify-between group">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-emerald-400">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-        </div>
-        <div>
-          <p class="text-[11px] text-zinc-400">E-mail</p>
-          <p class="text-xs font-mono font-medium text-white group-hover:text-emerald-300 transition">iannfava@gmail.com</p>
-        </div>
-      </div>
-      <span class="text-zinc-500 group-hover:text-emerald-400 transition text-xs">Enviar ↗</span>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/5517991658309" target="_blank" rel="noopener noreferrer" class="card-glass rounded-xl p-3.5 flex items-center justify-between group">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a11.042 11.042 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-        </div>
-        <div>
-          <p class="text-[11px] text-zinc-400">WhatsApp / Telefone</p>
-          <p class="text-xs font-mono font-medium text-white group-hover:text-emerald-300 transition">+55 17 99165-8309</p>
-        </div>
-      </div>
-      <span class="text-zinc-500 group-hover:text-emerald-400 transition text-xs">Conversar ↗</span>
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/iannfava" target="_blank" rel="noopener noreferrer" class="card-glass rounded-xl p-3.5 flex items-center justify-between group">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-emerald-400">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76m1.39 9.74v-8.37H5.07v8.37h2.78Z"/></svg>
-        </div>
-        <div>
-          <p class="text-[11px] text-zinc-400">LinkedIn</p>
-          <p class="text-xs font-mono font-medium text-white group-hover:text-emerald-300 transition">linkedin.com/in/iannfava</p>
-        </div>
-      </div>
-      <span class="text-zinc-500 group-hover:text-emerald-400 transition text-xs">Acessar ↗</span>
-    </a>
-
-    <!-- GitHub -->
-    <a href="https://github.com/iannfava" target="_blank" rel="noopener noreferrer" class="card-glass rounded-xl p-3.5 flex items-center justify-between group">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-emerald-400">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        </div>
-        <div>
-          <p class="text-[11px] text-zinc-400">GitHub</p>
-          <p class="text-xs font-mono font-medium text-white group-hover:text-emerald-300 transition">github.com/iannfava</p>
-        </div>
-      </div>
-      <span class="text-zinc-500 group-hover:text-emerald-400 transition text-xs">Acessar ↗</span>
-    </a>
-  </div>
-</section>
+</body></html>
